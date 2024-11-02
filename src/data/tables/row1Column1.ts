@@ -1,11 +1,13 @@
+import { view } from "framer-motion/client";
+
 const demo = [
   {
     id: 0,
     number: 0,
-    nickname: "닉네임",
-    loginType: "카카오",
+    nickname: "아름다운 여행자",
+    phoneNumber: "01000000000",
+    logIn: "자체",
     joinDate: "YYYY-MM-DD ",
-    rating: "등급1",
     viewDetails: "상세보기",
   },
 ];

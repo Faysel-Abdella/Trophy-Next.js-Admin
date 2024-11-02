@@ -13,12 +13,9 @@ import {
   Checkbox,
 } from "@nextui-org/react";
 import InputWithLabel from "@/components/InputWithLabel";
-import DropDownWithLabel from "@/components/DropDownWithLabel";
-import InputNoLabel from "@/components/InputNoLable";
 import HeaderDropDown from "@/components/HeaderDropDown";
 
 import row1Column1 from "@/data/tables/row1Column1";
-import row1Column1Columns from "@/data/columns/row1Column1Columns";
 import Link from "next/link";
 
 const MemberManagementPage = () => {
@@ -91,47 +88,24 @@ const MemberManagementPage = () => {
           <div className="flex items-center justify-between ">
             <InputWithLabel
               label="닉네임"
-              placeholder="닉네임"
-              labelStyles=" text-mainBlack text-base w-[70px]"
+              placeholder="아름다운 여행자"
+              labelStyles=" text-mainBlack text-base w-[90px]"
               inputStyles="w-[310px] h-[44px]"
             />
-            <DropDownWithLabel
-              title="로그인 유형"
-              options={options}
-              defaultSelectedKeys="1"
-              titleStyles=" text-mainBlack text-base w-[90px]"
-              insideStyles=" w-[310px] h-[44px]"
+            <InputWithLabel
+              label="휴대폰번호"
+              placeholder="01000000000"
+              labelStyles=" text-mainBlack text-base w-[90px]"
+              inputStyles="w-[310px] h-[44px]"
             />
 
-            <Button className="h-[46px] w-[170px] rounded-[5px] bg-mainPurple text-mainWhite text-base">
+            <Button className="h-[46px] w-[170px] rounded-[5px] bg-secondBlack text-mainWhite text-base">
               검색
             </Button>
           </div>
 
-          <div className="mt-[20px] flex items-center justify-between ">
-            <div className="flex items-center gap-[20px]">
-              <InputWithLabel
-                label="가입일"
-                labelStyles="text-mainBlack text-base w-[70px]"
-                inputStyles="w-[145px] h-[44px]"
-                type="date"
-              />
-              <InputNoLabel
-                type="date"
-                inputStyles="w-[145px] h-[44px] text-mainGray"
-                inputParentStyles="text-mainGray"
-                mainStyles="text-mainGray"
-              />
-            </div>
-            <DropDownWithLabel
-              title="등급"
-              options={options}
-              defaultSelectedKeys="1"
-              titleStyles=" text-mainBlack text-base w-[90px]"
-              insideStyles=" w-[310px] h-[44px]"
-            />
-
-            <Button className="h-[46px] w-[170px] rounded-[5px] bg-bgPurple text-mainPurple text-base">
+          <div className="mt-[20px] flex items-center justify-end ">
+            <Button className="h-[46px] w-[170px] rounded-[5px] bg-lightGray text-textGray text-base">
               초기화
             </Button>
           </div>
@@ -153,9 +127,15 @@ const MemberManagementPage = () => {
             />
             <Button
               aria-label="Header"
-              className="bg-mainGray text-mainWhite font-normal text-base w-[28px] rounded-[5px]"
+              className="bg-mainGray text-mainWhite font-normal text-base min-w-[68px] rounded-[5px]"
             >
               삭제
+            </Button>
+            <Button
+              aria-label="Header"
+              className="bg-secondBlack text-mainWhite font-normal text-base min-w-[100px] rounded-[5px]"
+            >
+              회원 등록
             </Button>
           </div>
         </div>
@@ -218,11 +198,12 @@ const MemberManagementPage = () => {
                 ></Checkbox>
               </TableColumn>
 
-              <React.Fragment>
-                {row1Column1Columns.map((column) => (
-                  <TableColumn key={column.key}>{column.name}</TableColumn>
-                ))}
-              </React.Fragment>
+              <TableColumn>번호</TableColumn>
+              <TableColumn>닉네임</TableColumn>
+              <TableColumn>휴대폰번호</TableColumn>
+              <TableColumn>로그인</TableColumn>
+              <TableColumn>가입일</TableColumn>
+              <TableColumn>상세보기</TableColumn>
             </TableHeader>
             <TableBody>
               {items.map((row) => (
@@ -244,9 +225,9 @@ const MemberManagementPage = () => {
                   </TableCell>
                   <TableCell>{row.number}</TableCell>
                   <TableCell>{row.nickname}</TableCell>
-                  <TableCell>{row.loginType}</TableCell>
+                  <TableCell>{row.phoneNumber}</TableCell>
+                  <TableCell>{row.logIn}</TableCell>
                   <TableCell>{row.joinDate}</TableCell>
-                  <TableCell>{row.rating}</TableCell>
                   <TableCell>
                     <Link
                       href="/admin/membership/membership-management/1"
