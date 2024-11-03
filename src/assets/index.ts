@@ -16,6 +16,10 @@ import noticeActive from "@/assets/icons/sidebar/notice-active.svg";
 import faq from "@/assets/icons/sidebar/faq.svg";
 import faqActive from "@/assets/icons/sidebar/faq-active.svg";
 
+import tableBodyImage1 from "@/assets/images/table-body-image-1.png";
+import tableBodyImage2 from "@/assets/images/table-body-image-2.png";
+import tableBodyImage3 from "@/assets/images/table-body-image-3.png";
+
 const assets = {
   member,
   memberActive,
@@ -29,6 +33,9 @@ const assets = {
   noticeActive,
   faq,
   faqActive,
+  tableBodyImage1,
+  tableBodyImage2,
+  tableBodyImage3,
 };
 
 export default assets;

@@ -11,12 +11,11 @@ import {
   TableCell,
   Pagination,
   Checkbox,
-  dropdown,
 } from "@nextui-org/react";
 import InputWithLabel from "@/components/InputWithLabel";
 import HeaderDropDown from "@/components/HeaderDropDown";
 
-import row1Column1 from "@/data/tables/row4Column1";
+import row4Column1 from "@/data/tables/row4Column1";
 import Link from "next/link";
 import DropDownWithLabel from "@/components/DropDownWithLabel";
 
@@ -67,7 +66,7 @@ const CommunityManagenmentPage = () => {
 
   const rowsPerPage = parseInt(viewValue);
 
-  const pages = Math.ceil(row1Column1.length / rowsPerPage);
+  const pages = Math.ceil(row4Column1.length / rowsPerPage);
 
   const [currentData, setCurrentData] = useState<any>();
 
@@ -75,9 +74,9 @@ const CommunityManagenmentPage = () => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
 
-    setCurrentData(row1Column1.slice(start, end));
-    return row1Column1.slice(start, end);
-  }, [page, row1Column1, viewValue, rowsPerPage]);
+    setCurrentData(row4Column1.slice(start, end));
+    return row4Column1.slice(start, end);
+  }, [page, row4Column1, viewValue, rowsPerPage]);
 
   // Selection Logic
   const [clickedRowIds, setClickedRowIds] = useState<number[]>([]);
@@ -87,20 +86,22 @@ const CommunityManagenmentPage = () => {
 
   return (
     <section className="font-noto">
-      <header>
-        <div className="flex justify-end">
-          <button className=" text-mainGray font-normal text-base text-right">
-            로그아웃
-          </button>
-        </div>
-        <div className="mt-4 flex flex-col gap-1">
-          <span className="text-mainGray font-normal text-base">
-            커뮤니티 관리
-          </span>
-          <h2 className=" font-bold text-[30px] leading-[42px] text-mainBlack">
-            회원 관리
-          </h2>
-        </div>
+      <div>
+        <header>
+          <div className="flex justify-end">
+            <button className=" text-mainGray font-normal text-base text-right">
+              로그아웃
+            </button>
+          </div>
+          <div className="mt-4 flex flex-col gap-1">
+            <span className="text-mainGray font-normal text-base">
+              커뮤니티 관리
+            </span>
+            <h2 className=" font-bold text-[30px] leading-[42px] text-mainBlack">
+              회원 관리
+            </h2>
+          </div>
+        </header>
 
         <div className="mt-4 bg-mainWhite py-7 px-9 gap-6 flex flex-col rounded-[20px]">
           <div className="flex items-center justify-between ">
@@ -142,7 +143,7 @@ const CommunityManagenmentPage = () => {
             </Button>
           </div>
         </div>
-      </header>
+      </div>
 
       <main className="rounded-[20px] bg-white py-6 px-5 mt-6 ">
         <div className="flex items-center justify-between">
@@ -262,7 +263,7 @@ const CommunityManagenmentPage = () => {
                   <TableCell>{row.createdDate}</TableCell>
                   <TableCell>
                     <Link
-                      href="/admin/membership/membership-management/1"
+                      href={`/admin/community/community-management/${row.id}`}
                       className="text-mainPurple underline underline-offset-2"
                     >
                       {row.viewDetails}
