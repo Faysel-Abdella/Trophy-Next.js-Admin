@@ -21,6 +21,7 @@ import Link from "next/link";
 import DropDownWithLabel from "@/components/DropDownWithLabel";
 import Header from "@/components/Header";
 import Image from "next/image";
+import InputNoLabel from "@/components/InputNoLable";
 
 const ToolProductManagementPage = () => {
   const options = [
@@ -84,14 +85,14 @@ const ToolProductManagementPage = () => {
         <div className="mt-4 bg-mainWhite py-7 px-9 gap-6 flex flex-col rounded-[20px]">
           <div className="flex items-center justify-between ">
             <InputWithLabel
-              label="제목"
-              placeholder="제목"
+              label="상품명"
+              placeholder="상품명"
               labelStyles=" text-mainBlack text-base w-[90px]"
               inputStyles="w-[310px] h-[44px]"
             />
             <InputWithLabel
-              label="작성자"
-              placeholder="아름다운 여행자"
+              label="카테고리"
+              placeholder="선택"
               labelStyles=" text-mainBlack text-base w-[90px]"
               inputStyles="w-[310px] h-[44px]"
             />
@@ -101,13 +102,52 @@ const ToolProductManagementPage = () => {
             </Button>
           </div>
 
-          <div className="flex items-end justify-end">
-            {/* //TODO:FIXME: Add DateRangePicker */}
-            {/* //TODO:FIXME: Add TimeRangePicker */}
+          <div className="flex items-center justify-between">
+            <div className="flex gap-3 justify-between items-center">
+              <InputWithLabel
+                label="등록일"
+                type="date"
+                labelStyles=" text-mainBlack text-base w-[90px]"
+                inputStyles="w-[140px] h-[44px]"
+              />
+              <span> - </span>
+
+              <InputNoLabel
+                placeholder="아름다운 여행자"
+                type="date"
+                inputStyles="w-[140px] h-[44px]"
+              />
+            </div>
+            <div className="flex gap-3 justify-between items-center">
+              <InputWithLabel
+                label="가격"
+                placeholder="0"
+                type="number"
+                labelStyles=" text-mainBlack text-base w-[90px]"
+                inputStyles="w-[140px] h-[44px]"
+              />
+              <span> - </span>
+
+              <InputNoLabel
+                placeholder="0"
+                type="number"
+                inputStyles="w-[140px] h-[44px]"
+              />
+            </div>
 
             <Button className="h-[46px] w-[170px] rounded-[5px] bg-lightGray text-textGray text-base">
               초기화
             </Button>
+          </div>
+
+          <div className="flex items-center justify-start ">
+            <DropDownWithLabel
+              title={"상태"}
+              options={options}
+              selectStyles="w-[310px] h-[44px]"
+              titleStyles="text-mainBlack text-base w-[90px]"
+              defaultSelectedKeys={options[0].key}
+            />
           </div>
         </div>
       </div>
