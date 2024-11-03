@@ -13,7 +13,7 @@ const SideBar = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <section className="flex bg-[#F3F3F3]">
-      <article className="bg-white rounded-tr-[30px]  min-w-[280px] min-h-screen">
+      <article className="bg-white rounded-tr-[30px]  min-w-[280px] max-h-screen sticky top-0">
         <div className="flex justify-center items-center pt-[55px]">
           <div className=" flex justify-center items-center w-[210px] h-[55px] ">
             <Image src={logo} alt="Our logo - Great Meat" />
@@ -39,7 +39,9 @@ const SideBar = ({ children }: { children: React.ReactNode }) => {
         </section>
       </article>
 
-      <section className="w-full pl-9 py-12 pr-6">{children}</section>
+      <section className="w-full pl-9 py-12 pr-6 min-h-screen">
+        {children}
+      </section>
     </section>
   );
 };
