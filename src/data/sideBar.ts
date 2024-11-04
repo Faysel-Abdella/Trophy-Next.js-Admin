@@ -24,7 +24,7 @@ const sideBarContent = [
       },
       {
         label: "게시글 신고 관리",
-        route: "/admin/community/post report management",
+        route: "/admin/community/post-report-management",
       },
       {
         label: "댓글 신고 관리",
