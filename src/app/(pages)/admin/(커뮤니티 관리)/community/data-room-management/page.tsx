@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const page = () => {
-  return <div>page</div>;
-};
-
-export default page;
-=======
 "use client";
 import React, { useState } from "react";
 import Header from "@/components/Header";
@@ -21,11 +12,12 @@ import {
   Pagination,
   Checkbox,
 } from "@nextui-org/react";
-import row4Column1 from "@/data/tables/row4Column1";
+import row7Column1 from "@/data/tables/row7Column1";
 import HeaderDropDown from "@/components/HeaderDropDown";
 import Link from "next/link";
+import Image from "next/image";
 
-const PostReportManagementPage = () => {
+const DataRoomManangementPage = () => {
   const viewOptions = [
     {
       key: "10",
@@ -54,7 +46,7 @@ const PostReportManagementPage = () => {
 
   const rowsPerPage = parseInt(viewValue);
 
-  const pages = Math.ceil(row4Column1.length / rowsPerPage);
+  const pages = Math.ceil(row7Column1.length / rowsPerPage);
 
   const [currentData, setCurrentData] = useState<any>();
 
@@ -62,9 +54,9 @@ const PostReportManagementPage = () => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
 
-    setCurrentData(row4Column1.slice(start, end));
-    return row4Column1.slice(start, end);
-  }, [page, row4Column1, viewValue, rowsPerPage]);
+    setCurrentData(row7Column1.slice(start, end));
+    return row7Column1.slice(start, end);
+  }, [page, row7Column1, viewValue, rowsPerPage]);
 
   // Selection Logic
   const [clickedRowIds, setClickedRowIds] = useState<number[]>([]);
@@ -168,8 +160,8 @@ const PostReportManagementPage = () => {
 
                 <TableColumn>번호</TableColumn>
                 <TableColumn>제목</TableColumn>
-                <TableColumn>작성자</TableColumn>
                 <TableColumn>타입</TableColumn>
+                <TableColumn>미리보기</TableColumn>
                 <TableColumn>작성날짜</TableColumn>
               </TableHeader>
               <TableBody>
@@ -193,7 +185,15 @@ const PostReportManagementPage = () => {
                     <TableCell>{row.number}</TableCell>
                     <TableCell>{row.title}</TableCell>
                     <TableCell>{row.author}</TableCell>
-                    <TableCell>{row.createdDate}</TableCell>
+                    <TableCell>
+                      <div className="flex justify-center items-center">
+                        <Image
+                          src={row.thumbnail}
+                          alt="table image"
+                          className="w-[49px] h-[49px]"
+                        />
+                      </div>
+                    </TableCell>
                     <TableCell>
                       <Link
                         href={`/admin/community/community-management/${row.id}`}
@@ -212,6 +212,4 @@ const PostReportManagementPage = () => {
     </section>
   );
 };
-
-export default PostReportManagementPage;
->>>>>>> 2876a6c17d5636ebaee7d1bee7d8adc58a988617
+export default DataRoomManangementPage;

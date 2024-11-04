@@ -29,8 +29,8 @@ const InputWithLabel = ({
         </h3>
       </div>
 
-      <div>
-        <div className={`${inputParentStyles} `}>
+      <div className="w-full">
+        <div className={`${inputParentStyles}`}>
           <Input
             placeholder={placeholder}
             defaultValue={defaultValue}

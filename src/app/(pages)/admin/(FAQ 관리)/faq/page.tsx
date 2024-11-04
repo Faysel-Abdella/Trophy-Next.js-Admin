@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const page = () => {
-  return <div>community-management</div>;
-};
-
-export default page;
-=======
 "use client";
 import React, { useState } from "react";
 
@@ -24,18 +15,11 @@ import {
 import InputWithLabel from "@/components/InputWithLabel";
 import HeaderDropDown from "@/components/HeaderDropDown";
 
-import row4Column1 from "@/data/tables/row4Column1";
+import row10Column1 from "@/data/tables/row10Column1";
 import Link from "next/link";
-import DropDownWithLabel from "@/components/DropDownWithLabel";
+import Header from "@/components/Header";
 
-const CommunityManagenmentPage = () => {
-  const options = [
-    { key: "1", label: "전체" },
-    { key: "2", label: "일반회원" },
-    { key: "3", label: "판매자" },
-    { key: "4", label: "관리자" },
-  ];
-
+const FaqPage = () => {
   const viewOptions = [
     {
       key: "10",
@@ -55,17 +39,6 @@ const CommunityManagenmentPage = () => {
     },
   ];
 
-  const dropdownOptions = [
-    {
-      key: "0",
-      label: "선택",
-    },
-    {
-      key: "1",
-      label: "개씩 보기",
-    },
-  ];
-
   const viewOptionsDefault = viewOptions[0].key;
 
   const [viewValue, setViewValue] = useState(viewOptionsDefault);
@@ -75,7 +48,7 @@ const CommunityManagenmentPage = () => {
 
   const rowsPerPage = parseInt(viewValue);
 
-  const pages = Math.ceil(row4Column1.length / rowsPerPage);
+  const pages = Math.ceil(row10Column1.length / rowsPerPage);
 
   const [currentData, setCurrentData] = useState<any>();
 
@@ -83,9 +56,9 @@ const CommunityManagenmentPage = () => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
 
-    setCurrentData(row4Column1.slice(start, end));
-    return row4Column1.slice(start, end);
-  }, [page, row4Column1, viewValue, rowsPerPage]);
+    setCurrentData(row10Column1.slice(start, end));
+    return row10Column1.slice(start, end);
+  }, [page, row10Column1, viewValue, rowsPerPage]);
 
   // Selection Logic
   const [clickedRowIds, setClickedRowIds] = useState<number[]>([]);
@@ -96,59 +69,22 @@ const CommunityManagenmentPage = () => {
   return (
     <section className="font-noto">
       <div>
-        <header>
-          <div className="flex justify-end">
-            <button className=" text-mainGray font-normal text-base text-right">
-              로그아웃
-            </button>
-          </div>
-          <div className="mt-4 flex flex-col gap-1">
-            <span className="text-mainGray font-normal text-base">
-              커뮤니티 관리
-            </span>
-            <h2 className=" font-bold text-[30px] leading-[42px] text-mainBlack">
-              회원 관리
-            </h2>
-          </div>
-        </header>
+        <Header buttonLabel={"로그아웃"} title={"FAQ 관리"} />
 
         <div className="mt-4 bg-mainWhite py-7 px-9 gap-6 flex flex-col rounded-[20px]">
-          <div className="flex items-center justify-between ">
+          <div className="flex items-center justify-between w-full gap-3 ">
             <InputWithLabel
               label="제목"
               placeholder="제목"
               labelStyles=" text-mainBlack text-base w-[90px]"
-              inputStyles="w-[310px] h-[44px]"
-            />
-            <InputWithLabel
-              label="작성자"
-              placeholder="아름다운 여행자"
-              labelStyles=" text-mainBlack text-base w-[90px]"
-              inputStyles="w-[310px] h-[44px]"
+              inputStyles="w-full h-[44px]"
+              mainStyles="w-full"
+              inputParentStyles="w-full"
+              type="text"
             />
 
             <Button className="h-[46px] w-[170px] rounded-[5px] bg-secondBlack text-mainWhite text-base">
               검색
-            </Button>
-          </div>
-
-          <div className="flex items-center justify-between">
-            <DropDownWithLabel
-              title={"카테고리"}
-              options={dropdownOptions}
-              selectStyles="w-[310px] h-[44px]"
-              titleStyles="text-mainBlack text-base w-[90px]"
-              defaultSelectedKeys={dropdownOptions[0].key}
-            />
-            <DropDownWithLabel
-              title={"타입"}
-              options={dropdownOptions}
-              selectStyles="w-[310px] h-[44px]"
-              titleStyles="text-mainBlack text-base w-[90px]"
-              defaultSelectedKeys={dropdownOptions[0].key}
-            />
-            <Button className="h-[46px] w-[170px] rounded-[5px] bg-lightGray text-textGray text-base">
-              초기화
             </Button>
           </div>
         </div>
@@ -241,10 +177,8 @@ const CommunityManagenmentPage = () => {
               </TableColumn>
 
               <TableColumn>번호</TableColumn>
-              <TableColumn>제목</TableColumn>
-              <TableColumn>작성자</TableColumn>
-              <TableColumn>카테고리</TableColumn>
-              <TableColumn>타입</TableColumn>
+              <TableColumn>질문</TableColumn>
+              <TableColumn>답변</TableColumn>
               <TableColumn>작성날짜</TableColumn>
             </TableHeader>
             <TableBody>
@@ -266,10 +200,8 @@ const CommunityManagenmentPage = () => {
                     ></Checkbox>
                   </TableCell>
                   <TableCell>{row.number}</TableCell>
-                  <TableCell>{row.title}</TableCell>
-                  <TableCell>{row.author}</TableCell>
-                  <TableCell>{row.category}</TableCell>
-                  <TableCell>{row.createdDate}</TableCell>
+                  <TableCell>{row.question}</TableCell>
+                  <TableCell>{row.answer}</TableCell>
                   <TableCell>
                     <Link
                       href={`/admin/community/community-management/${row.id}`}
@@ -288,5 +220,4 @@ const CommunityManagenmentPage = () => {
   );
 };
 
-export default CommunityManagenmentPage;
->>>>>>> 2876a6c17d5636ebaee7d1bee7d8adc58a988617
+export default FaqPage;
