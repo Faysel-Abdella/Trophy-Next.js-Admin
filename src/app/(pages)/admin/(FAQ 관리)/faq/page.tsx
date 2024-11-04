@@ -179,7 +179,7 @@ const FaqPage = () => {
               <TableColumn>번호</TableColumn>
               <TableColumn>질문</TableColumn>
               <TableColumn>답변</TableColumn>
-              <TableColumn>작성날짜</TableColumn>
+              {/* <TableColumn>작성날짜</TableColumn> */}
             </TableHeader>
             <TableBody>
               {items.map((row) => (
@@ -202,14 +202,14 @@ const FaqPage = () => {
                   <TableCell>{row.number}</TableCell>
                   <TableCell>{row.question}</TableCell>
                   <TableCell>{row.answer}</TableCell>
-                  <TableCell>
+                  {/* <TableCell>
                     <Link
                       href={`/admin/community/community-management/${row.id}`}
                       className="text-mainPurple underline underline-offset-2"
                     >
                       {row.viewDetails}
                     </Link>
-                  </TableCell>
+                  </TableCell> */}
                 </TableRow>
               ))}
             </TableBody>

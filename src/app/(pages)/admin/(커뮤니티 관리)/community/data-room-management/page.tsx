@@ -162,7 +162,7 @@ const DataRoomManangementPage = () => {
                 <TableColumn>제목</TableColumn>
                 <TableColumn>타입</TableColumn>
                 <TableColumn>미리보기</TableColumn>
-                <TableColumn>작성날짜</TableColumn>
+                {/* <TableColumn>작성날짜</TableColumn> */}
               </TableHeader>
               <TableBody>
                 {items.map((row) => (
@@ -194,14 +194,14 @@ const DataRoomManangementPage = () => {
                         />
                       </div>
                     </TableCell>
-                    <TableCell>
+                    {/* <TableCell>
                       <Link
                         href={`/admin/community/community-management/${row.id}`}
                         className="text-mainPurple underline underline-offset-2"
                       >
                         {row.viewDetails}
                       </Link>
-                    </TableCell>
+                    </TableCell> */}
                   </TableRow>
                 ))}
               </TableBody>

@@ -197,7 +197,7 @@ const SurveyManagementPage = () => {
               <TableColumn>카테고리</TableColumn>
               <TableColumn>작성일</TableColumn>
               <TableColumn>작성자</TableColumn>
-              <TableColumn>작성날짜</TableColumn>
+              {/* <TableColumn>작성날짜</TableColumn> */}
             </TableHeader>
             <TableBody>
               {items.map((row) => (
@@ -222,14 +222,14 @@ const SurveyManagementPage = () => {
                   <TableCell>{row.category}</TableCell>
                   <TableCell>{row.createdDate}</TableCell>
                   <TableCell>{row.author}</TableCell>
-                  <TableCell>
+                  {/* <TableCell>
                     <Link
                       href={`/admin/community/community-management/${row.id}`}
                       className="text-mainPurple underline underline-offset-2"
                     >
                       {row.viewDetails}
                     </Link>
-                  </TableCell>
+                  </TableCell> */}
                 </TableRow>
               ))}
             </TableBody>

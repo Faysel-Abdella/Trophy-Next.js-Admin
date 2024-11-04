@@ -203,7 +203,7 @@ const MemberManagementPage = () => {
               <TableColumn>휴대폰번호</TableColumn>
               <TableColumn>로그인</TableColumn>
               <TableColumn>가입일</TableColumn>
-              <TableColumn>상세보기</TableColumn>
+              {/* <TableColumn>상세보기</TableColumn> */}
             </TableHeader>
             <TableBody>
               {items.map((row) => (
@@ -228,14 +228,14 @@ const MemberManagementPage = () => {
                   <TableCell>{row.phoneNumber}</TableCell>
                   <TableCell>{row.logIn}</TableCell>
                   <TableCell>{row.joinDate}</TableCell>
-                  <TableCell>
+                  {/* <TableCell>
                     <Link
                       href="/admin/membership/membership-management/1"
                       className="text-mainPurple underline underline-offset-2"
                     >
                       {row.viewDetails}
                     </Link>
-                  </TableCell>
+                  </TableCell> */}
                 </TableRow>
               ))}
             </TableBody>

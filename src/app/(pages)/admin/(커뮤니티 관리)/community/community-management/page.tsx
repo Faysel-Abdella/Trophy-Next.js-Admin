@@ -236,7 +236,7 @@ const CommunityManagenmentPage = () => {
               <TableColumn>작성자</TableColumn>
               <TableColumn>카테고리</TableColumn>
               <TableColumn>타입</TableColumn>
-              <TableColumn>작성날짜</TableColumn>
+              {/* <TableColumn>작성날짜</TableColumn> */}
             </TableHeader>
             <TableBody>
               {items.map((row) => (
@@ -261,14 +261,14 @@ const CommunityManagenmentPage = () => {
                   <TableCell>{row.author}</TableCell>
                   <TableCell>{row.category}</TableCell>
                   <TableCell>{row.createdDate}</TableCell>
-                  <TableCell>
+                  {/* <TableCell>
                     <Link
                       href={`/admin/community/community-management/${row.id}`}
                       className="text-mainPurple underline underline-offset-2"
                     >
                       {row.viewDetails}
                     </Link>
-                  </TableCell>
+                  </TableCell> */}
                 </TableRow>
               ))}
             </TableBody>

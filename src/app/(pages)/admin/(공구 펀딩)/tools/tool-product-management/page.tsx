@@ -244,7 +244,7 @@ const ToolProductManagementPage = () => {
               <TableColumn>등록일</TableColumn>
               <TableColumn>카테고리</TableColumn>
               <TableColumn>상태</TableColumn>
-              <TableColumn>작성날짜</TableColumn>
+              {/* <TableColumn>작성날짜</TableColumn> */}
             </TableHeader>
             <TableBody>
               {items.map((row) => (
@@ -278,14 +278,14 @@ const ToolProductManagementPage = () => {
                   <TableCell>{row.registrationDate}</TableCell>
                   <TableCell>{row.category}</TableCell>
                   <TableCell>{row.situation}</TableCell>
-                  <TableCell>
+                  {/* <TableCell>
                     <Link
                       href={`/admin/community/community-management/${row.id}`}
                       className="text-mainPurple underline underline-offset-2"
                     >
                       {row.viewDetails}
                     </Link>
-                  </TableCell>
+                  </TableCell> */}
                 </TableRow>
               ))}
             </TableBody>
