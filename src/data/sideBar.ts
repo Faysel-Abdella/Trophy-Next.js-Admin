@@ -24,19 +24,19 @@ const sideBarContent = [
       },
       {
         label: "게시글 신고 관리",
-        route: "/admin/community/post report management",
+        route: "/admin/community/post-report-management",
       },
       {
         label: "댓글 신고 관리",
-        route: "/admin/community/manage comment reports",
+        route: "/admin/community/manage-comment-reports",
       },
       {
         label: "자료실 관리",
-        route: "/admin/community/data room management",
+        route: "/admin/community/data-room-management",
       },
       {
         label: "만보 걷기 관리",
-        route: "/admin/community/step walking management",
+        route: "/admin/community/step-walking-management",
       },
     ],
   },
@@ -46,23 +46,23 @@ const sideBarContent = [
     icon: assets.tools,
     activeIcon: assets.toolsActive,
     init: "/admin/tools",
-    firstRoute: "/admin/tools/tool product management",
+    firstRoute: "/admin/tools/tool-product-management",
     subTitles: [
       {
         label: "공구 상품 관리",
-        route: "/admin/tools/tool product management",
+        route: "/admin/tools/tool-product-management",
       },
       {
         label: "펀딩 상품 관리",
-        route: "/admin/tools/funding product management",
+        route: "/admin/tools/funding-product-management",
       },
       {
         label: "주문 관리",
-        route: "/admin/tools/order Management",
+        route: "/admin/tools/order-Management",
       },
       {
         label: "문의 관리",
-        route: "/admin/tools/inquiry Management",
+        route: "/admin/tools/inquiry-Management",
       },
     ],
   },
@@ -73,15 +73,15 @@ const sideBarContent = [
     icon: assets.survey,
     activeIcon: assets.surveyActive,
     init: "/admin/survey",
-    firstRoute: "/admin/survey/survey management",
+    firstRoute: "/admin/survey/survey-management",
     subTitles: [
       {
         label: "설문 관리",
-        route: "/admin/survey/survey management",
+        route: "/admin/survey/survey-management",
       },
       {
         label: "문항 수정",
-        route: "/admin/survey/edit question",
+        route: "/admin/survey/edit-question",
       },
     ],
   },
