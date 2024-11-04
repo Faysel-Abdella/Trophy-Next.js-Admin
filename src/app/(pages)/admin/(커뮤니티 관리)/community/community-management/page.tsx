@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const page = () => {
-  return <div>community-management</div>;
-};
-
-export default page;
-=======
 "use client";
 import React, { useState } from "react";
 
@@ -289,4 +280,3 @@ const CommunityManagenmentPage = () => {
 };
 
 export default CommunityManagenmentPage;
->>>>>>> 2876a6c17d5636ebaee7d1bee7d8adc58a988617
