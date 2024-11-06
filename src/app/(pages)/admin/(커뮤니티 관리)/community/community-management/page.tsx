@@ -98,7 +98,7 @@ const CommunityManagenmentPage = () => {
               커뮤니티 관리
             </span>
             <h2 className=" font-bold text-[30px] leading-[42px] text-mainBlack">
-              회원 관리
+              게시글 관리
             </h2>
           </div>
         </header>

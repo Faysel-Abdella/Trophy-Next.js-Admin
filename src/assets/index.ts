@@ -20,6 +20,8 @@ import tableBodyImage1 from "@/assets/images/table-body-image-1.png";
 import tableBodyImage2 from "@/assets/images/table-body-image-2.png";
 import tableBodyImage3 from "@/assets/images/table-body-image-3.png";
 
+import demoImage from "@/assets/images/demo-image.png";
+
 const assets = {
   member,
   memberActive,
@@ -36,6 +38,8 @@ const assets = {
   tableBodyImage1,
   tableBodyImage2,
   tableBodyImage3,
+
+  demoImage,
 };
 
 export default assets;
