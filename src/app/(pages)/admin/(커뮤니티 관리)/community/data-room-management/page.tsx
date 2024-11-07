@@ -68,7 +68,7 @@ const DataRoomManangementPage = () => {
       <div>
         <Header
           buttonLabel={"로그아웃"}
-          title={"신고 관리"}
+          title={"자료실 관리"}
           subtitle={"커뮤니티 관리"}
         />
 
@@ -160,7 +160,7 @@ const DataRoomManangementPage = () => {
 
                 <TableColumn>번호</TableColumn>
                 <TableColumn>제목</TableColumn>
-                <TableColumn>타입</TableColumn>
+                <TableColumn>작성날짜</TableColumn>
                 <TableColumn>미리보기</TableColumn>
                 {/* <TableColumn>작성날짜</TableColumn> */}
               </TableHeader>
@@ -183,7 +183,9 @@ const DataRoomManangementPage = () => {
                       ></Checkbox>
                     </TableCell>
                     <TableCell>{row.number}</TableCell>
-                    <TableCell>{row.title}</TableCell>
+                    <TableCell className="max-w-[200px] text-nowrap overflow-hidden text-ellipsis">
+                      {row.title}
+                    </TableCell>
                     <TableCell>{row.author}</TableCell>
                     <TableCell>
                       <div className="flex justify-center items-center">

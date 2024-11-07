@@ -257,7 +257,9 @@ const CommunityManagenmentPage = () => {
                     ></Checkbox>
                   </TableCell>
                   <TableCell>{row.number}</TableCell>
-                  <TableCell>{row.title}</TableCell>
+                  <TableCell className="max-w-[200px]  overflow-hidden text-nowrap text-ellipsis">
+                    {row.title}
+                  </TableCell>
                   <TableCell>{row.author}</TableCell>
                   <TableCell>{row.category}</TableCell>
                   <TableCell>{row.createdDate}</TableCell>

@@ -25,6 +25,9 @@ import avatarDemo from "@/assets/icons/avatar-demo.svg";
 import success from "@/assets/icons/success.svg";
 import failure from "@/assets/icons/failure.svg";
 
+import camera from "@/assets/icons/camera.svg";
+import cancel from "@/assets/icons/cancel.svg";
+
 const assets = {
   member,
   memberActive,
@@ -46,6 +49,9 @@ const assets = {
   avatarDemo,
   success,
   failure,
+
+  camera,
+  cancel,
 };
 
 export default assets;

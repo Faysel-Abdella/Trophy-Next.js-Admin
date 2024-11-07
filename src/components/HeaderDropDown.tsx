@@ -12,7 +12,7 @@ const HeaderDropDown = ({
   options: { key: string; label: string }[];
   defaultSelectedKey: string;
   value: string;
-  setNewValue: (value: string) => void;
+  setNewValue?: (value: string) => void;
   styles?: string;
   mainStyles?: string;
 }) => {
