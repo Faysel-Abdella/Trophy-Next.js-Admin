@@ -12,7 +12,7 @@ import React, { useRef } from "react";
 import JoditEditor from "jodit-react";
 import { Button } from "@nextui-org/react";
 
-const RegisterToolProduct = () => {
+const RegisterFund = () => {
   const titleStyle = "font-bold text-base text-secondBlack w-[100px]";
 
   const editor = useRef(null);
@@ -39,7 +39,7 @@ const RegisterToolProduct = () => {
   return (
     <section className="font-noto">
       <div>
-        <Header buttonLabel={"로그아웃"} title={"공구 상품 등록하기"} />
+        <Header buttonLabel={"로그아웃"} title={"펀딩 상품 등록하기"} />
       </div>
 
       <div className="w-full mt-4 bg-mainWhite py-7 px-9 gap-6 flex flex-col rounded-[20px]">
@@ -54,7 +54,7 @@ const RegisterToolProduct = () => {
           </div>
         </div>
 
-        <InputWithLabel label="작성자" labelStyles={`${titleStyle}`} />
+        <InputWithLabel label="상품명" labelStyles={`${titleStyle}`} />
 
         <div>
           <DropDownWithLabel
@@ -62,15 +62,20 @@ const RegisterToolProduct = () => {
             options={dropdownOptions}
             defaultSelectedKeys={dropdownOptions[0].key}
             titleStyles={`${titleStyle}`}
-            selectStyles="w-[310px] h-[44px]"
+            selectStyles="w-[443px] h-[44px]"
           />
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-[30px]">
           <div className="w-1/2">
             <InputWithLabel label="가격" labelStyles={`${titleStyle}`} />
           </div>
+          <div className="w-1/2">
+            <InputWithLabel label="목표금액" labelStyles={`${titleStyle}`} />
+          </div>
+        </div>
 
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-[30px]">
             <InputWithLabel
               label="기간"
@@ -81,15 +86,6 @@ const RegisterToolProduct = () => {
             <span>-</span>
 
             <InputNoLabel type="date" />
-          </div>
-        </div>
-
-        <div className="flex items-center justify-between gap-[30px]">
-          <div className="w-1/2">
-            <InputWithLabel label="목표수량" labelStyles={`${titleStyle}`} />
-          </div>
-          <div className="w-1/2">
-            <InputWithLabel label="최소구매" labelStyles={`${titleStyle}`} />
           </div>
         </div>
 
@@ -112,4 +108,4 @@ const RegisterToolProduct = () => {
   );
 };
 
-export default RegisterToolProduct;
+export default RegisterFund;

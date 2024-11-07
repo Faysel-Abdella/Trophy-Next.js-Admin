@@ -12,8 +12,9 @@ import React, { useRef } from "react";
 import JoditEditor from "jodit-react";
 import { Button } from "@nextui-org/react";
 
-const ToolProductDetailsPage = () => {
+const FundingProductDetails = () => {
   const titleStyle = "font-bold text-base text-mainGray w-[100px]";
+  const valueStyle = "text-base font-bold text-secondBlack";
 
   const editor = useRef(null);
   const config = {
@@ -49,7 +50,7 @@ const ToolProductDetailsPage = () => {
   return (
     <section className="font-noto">
       <div>
-        <Header buttonLabel={"로그아웃"} title={"공구 상품 상세보기"} />
+        <Header buttonLabel={"로그아웃"} title={"펀딩 상품 상세보기"} />
       </div>
 
       <div className="w-full mt-4 bg-mainWhite py-7 px-9 gap-6 flex flex-col rounded-[20px]">
@@ -74,76 +75,25 @@ const ToolProductDetailsPage = () => {
           </div>
         </div>
 
-        <InputWithLabel
-          label="상품명"
-          labelStyles={`${titleStyle}`}
-          defaultValue="상품명 텍스트"
-          disabled={true}
-        />
-
-        <div className="flex items-center justify-between">
-          <div className="w-1/2">
-            <DropDownWithLabel
-              title={"카테고리"}
-              options={dropdownOptions}
-              defaultSelectedKeys={dropdownOptions[0].key}
-              titleStyles={`${titleStyle}`}
-              selectStyles="w-[420px] h-[44px]"
-            />
-          </div>
-          <div className="">
-            <DropDownWithLabel
-              title={"상태"}
-              options={dropdownOptions2}
-              defaultSelectedKeys={dropdownOptions2[0].key}
-              titleStyles={`${titleStyle}`}
-              selectStyles="w-[420px] h-[44px]"
-            />
-          </div>
+        <div className="flex items-center">
+          <h3 className={`${titleStyle}`}>상품명</h3>
+          <p className={`${valueStyle}`}>상품명 상품명</p>
         </div>
-
-        <div className="flex items-center justify-between">
-          <div className="">
-            <InputWithLabel
-              label="가격"
-              labelStyles={`${titleStyle}`}
-              inputStyles="w-[420px]"
-            />
-          </div>
-
-          <div className="flex items-center gap-[30px] ">
-            <InputWithLabel
-              label="기간"
-              type="date"
-              labelStyles={`${titleStyle}`}
-              inputStyles="w-[175px]"
-            />
-
-            <span>-</span>
-
-            <InputNoLabel type="date" inputStyles="w-[175px]" />
-          </div>
+        <div className="flex items-center">
+          <h3 className={`${titleStyle}`}>카테고리</h3>
+          <p className={`${valueStyle}`}>카테고리</p>
         </div>
-
-        <div className="flex items-center justify-between gap-[30px]">
-          <div className="w-1/2">
-            <InputWithLabel
-              label="목표수량"
-              labelStyles={`${titleStyle}`}
-              defaultValue="100개"
-              disabled={true}
-              inputStyles="w-[420px]"
-            />
-          </div>
-          <div className="w-1/2">
-            <InputWithLabel
-              label="최소구매"
-              labelStyles={`${titleStyle}`}
-              defaultValue="1개"
-              disabled={true}
-              inputStyles="w-[420px]"
-            />
-          </div>
+        <div className="flex items-center">
+          <h3 className={`${titleStyle}`}>가격</h3>
+          <p className={`${valueStyle}`}>10,000원</p>
+        </div>
+        <div className="flex items-center">
+          <h3 className={`${titleStyle}`}>목표금액</h3>
+          <p className={`${valueStyle}`}>1000,000원</p>
+        </div>
+        <div className="flex items-center">
+          <h3 className={`${titleStyle}`}>기간</h3>
+          <p className={`${valueStyle}`}>YYYY-MM-DD - YYYY-MM-DD</p>
         </div>
 
         <div className="mt-6">
@@ -168,4 +118,4 @@ const ToolProductDetailsPage = () => {
   );
 };
 
-export default ToolProductDetailsPage;
+export default FundingProductDetails;

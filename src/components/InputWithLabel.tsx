@@ -10,6 +10,7 @@ const InputWithLabel = ({
   inputStyles,
   placeholder,
   type = "text",
+  disabled,
 }: {
   label: string;
   defaultValue?: string;
@@ -20,6 +21,7 @@ const InputWithLabel = ({
   inputStyles?: string;
   placeholder?: string;
   type?: "text" | "number" | "date";
+  disabled?: boolean;
 }) => {
   return (
     <section className={`flex items-center ${mainStyles}`}>
@@ -35,6 +37,7 @@ const InputWithLabel = ({
             placeholder={placeholder}
             defaultValue={defaultValue}
             type={type}
+            disabled={disabled}
             onValueChange={handelChangeText}
             classNames={{
               input: [

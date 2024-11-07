@@ -79,7 +79,7 @@ const FundingProductManagementPage = () => {
   return (
     <section className="font-noto">
       <div>
-        <Header buttonLabel={"로그아웃"} title={"공구 상품 관리 "} />
+        <Header buttonLabel={"로그아웃"} title={"펀딩 상품 관리"} />
 
         <div className="mt-4 bg-mainWhite py-7 px-9 gap-6 flex flex-col rounded-[20px]">
           <div className="flex items-center justify-between ">
@@ -123,6 +123,23 @@ const FundingProductManagementPage = () => {
 
           <div className="flex justify-center items-center gap-3">
             <HeaderDropDown
+              options={[
+                {
+                  key: "10",
+                  label: "최신순",
+                },
+                {
+                  key: "20",
+                  label: "최신순",
+                },
+              ]}
+              defaultSelectedKey="최신순"
+              value="10"
+              setNewValue={() => {}}
+              styles="w-[124px] "
+              mainStyles="bg-transparent border border-grayBorder rounded-[5px]"
+            />
+            <HeaderDropDown
               options={viewOptions}
               defaultSelectedKey={viewOptionsDefault}
               value={viewValue}
@@ -130,6 +147,7 @@ const FundingProductManagementPage = () => {
               styles="w-[139px] "
               mainStyles="bg-transparent border border-grayBorder rounded-[5px]"
             />
+
             <Button
               aria-label="Header"
               className="bg-mainGray text-mainWhite font-normal text-base min-w-[68px] rounded-[5px]"
@@ -138,9 +156,9 @@ const FundingProductManagementPage = () => {
             </Button>
             <Button
               aria-label="Header"
-              className="bg-secondBlack text-mainWhite font-normal text-base min-w-[100px] rounded-[5px]"
+              className="bg-secondBlack text-mainWhite font-normal text-base min-w-[68px] rounded-[5px]"
             >
-              회원 등록
+              등록
             </Button>
           </div>
         </div>
@@ -239,7 +257,9 @@ const FundingProductManagementPage = () => {
                       />
                     </div>
                   </TableCell>
-                  <TableCell>{row.productName}</TableCell>
+                  <TableCell className="max-w-[200px] text-nowrap text-ellipsis overflow-hidden">
+                    {row.productName}
+                  </TableCell>
                   <TableCell>{row.registrationDate}</TableCell>
                   <TableCell>{row.category}</TableCell>
                   <TableCell>{row.situation}</TableCell>
