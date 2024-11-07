@@ -185,7 +185,7 @@ const ViewPost2 = () => {
         </section>
 
         <div className="flex items-center justify-center mt-10 ">
-          <Button className="bg-[#4D4D4D] py-[10px] px-[20px] text-mainWhite">
+          <Button className="bg-[#4D4D4D] py-[10px] px-[20px] text-mainWhite rounded-[5px]">
             게시글 삭제
           </Button>
         </div>

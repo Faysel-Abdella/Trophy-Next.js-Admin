@@ -217,7 +217,7 @@ const MembershipDetail = () => {
           {(onClose) => (
             <>
               <ModalBody>
-                <div className="">
+                <div>
                   <h2 className="font-bold text-[30px] leading-10 text-secondBlack">
                     포인트 내역
                   </h2>
