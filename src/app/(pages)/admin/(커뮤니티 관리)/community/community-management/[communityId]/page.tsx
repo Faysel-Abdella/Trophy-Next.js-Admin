@@ -74,7 +74,7 @@ const CommunityManagementDetailsPage = () => {
 
         <section className="mt-14 bg-mainWhite rounded-[20px] py-8 px-10 ">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-[30px]">
+            <div className="flex items-center gap-6 ]">
               <Checkbox></Checkbox>
               <h6 className="text-mainBlack font-bold text-base">댓글</h6>
             </div>
@@ -89,7 +89,7 @@ const CommunityManagementDetailsPage = () => {
               <tr className="py-4 flex items-center gap-[30px]">
                 <td>
                   <Checkbox
-                    className={`text-center size-[14px] rounded-[2px]`}
+                    className={`text-center size-[14px] rounded-[2px] mr-2`}
                   ></Checkbox>
                 </td>
                 <td className="text-mainBlack font-bold text-base">닉네임</td>
@@ -106,7 +106,7 @@ const CommunityManagementDetailsPage = () => {
               <tr className="py-4 flex items-center gap-[30px]">
                 <td>
                   <Checkbox
-                    className={`text-center size-[14px] rounded-[2px]`}
+                    className={`text-center size-[14px] rounded-[2px] mr-2`}
                   ></Checkbox>
                 </td>
                 <td className="text-mainBlack font-bold text-base">닉네임</td>

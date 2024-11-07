@@ -74,16 +74,7 @@ const sideBarContent = [
     activeIcon: assets.surveyActive,
     init: "/admin/survey",
     firstRoute: "/admin/survey/survey-management",
-    subTitles: [
-      {
-        label: "설문 관리",
-        route: "/admin/survey/survey-management",
-      },
-      {
-        label: "문항 수정",
-        route: "/admin/survey/edit-question",
-      },
-    ],
+    subTitles: [],
   },
   {
     order: "5",
