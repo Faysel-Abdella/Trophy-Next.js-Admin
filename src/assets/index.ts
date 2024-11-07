@@ -21,6 +21,9 @@ import tableBodyImage2 from "@/assets/images/table-body-image-2.png";
 import tableBodyImage3 from "@/assets/images/table-body-image-3.png";
 
 import demoImage from "@/assets/images/demo-image.png";
+import avatarDemo from "@/assets/icons/avatar-demo.svg";
+import success from "@/assets/icons/success.svg";
+import failure from "@/assets/icons/failure.svg";
 
 const assets = {
   member,
@@ -40,6 +43,9 @@ const assets = {
   tableBodyImage3,
 
   demoImage,
+  avatarDemo,
+  success,
+  failure,
 };
 
 export default assets;
