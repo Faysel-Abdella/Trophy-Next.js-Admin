@@ -160,7 +160,7 @@ const StepWalkingManagementPage = () => {
 
                 <TableColumn>번호</TableColumn>
                 <TableColumn>제목</TableColumn>
-                <TableColumn>타입</TableColumn>
+                <TableColumn>작성날짜</TableColumn>
                 <TableColumn>미리보기</TableColumn>
                 {/* <TableColumn>작성날짜</TableColumn> */}
               </TableHeader>
@@ -183,7 +183,9 @@ const StepWalkingManagementPage = () => {
                       ></Checkbox>
                     </TableCell>
                     <TableCell>{row.number}</TableCell>
-                    <TableCell>{row.title}</TableCell>
+                    <TableCell className="max-w-[200px] overflow-hidden text-nowrap text-ellipsis">
+                      {row.title}
+                    </TableCell>
                     <TableCell>{row.author}</TableCell>
                     <TableCell>
                       <div className="flex justify-center items-center">

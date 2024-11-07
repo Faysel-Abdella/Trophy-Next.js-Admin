@@ -4,10 +4,10 @@ const demo = [
   {
     number: 1,
     thumbnail: assets.tableBodyImage1,
-    productName: "육아툰 제목 영역",
-    registrationDate: "날짜",
+    productName: "상품 이름 텍스트 영역입니다. 상품 이름 텍스트",
+    registrationDate: "YYYY-MM-DD ",
     category: "카테고리",
-    situation: "답변완료",
+    situation: "진행중",
     viewDetails: "상세보기",
   },
 ];

@@ -21,8 +21,9 @@ const HeaderDropDown = ({
       selectedKeys={[value]}
       disallowEmptySelection={true}
       onChange={(e) => {
-        setNewValue(e.target.value);
-        console.log(e.target.value);
+        if (setNewValue) {
+          setNewValue(e.target.value);
+        }
       }}
       defaultSelectedKeys={[defaultSelectedKey]}
       classNames={{

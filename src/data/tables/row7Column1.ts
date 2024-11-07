@@ -5,7 +5,7 @@ const demo = [
     number: 1,
     thumbnail: assets.tableBodyImage1,
     title: "게시글 제목 텍스트 영역입니다. 게시글 제목 텍스트 영역입니다. ",
-    author: "작가 이름",
+    author: "YYYY-MM-DD ",
     round: "10",
     viewDetails: "상세보기",
   },

@@ -119,20 +119,30 @@ const ToolProductManagementPage = () => {
               />
             </div>
             <div className="flex gap-3 justify-between items-center">
-              <InputWithLabel
-                label="가격"
-                placeholder="0"
-                type="number"
-                labelStyles=" text-mainBlack text-base w-[90px]"
-                inputStyles="w-[140px] h-[44px]"
-              />
+              <div className="relative">
+                <InputWithLabel
+                  label="가격"
+                  placeholder="0"
+                  type="number"
+                  labelStyles=" text-mainBlack text-base w-[90px]"
+                  inputStyles="w-[140px] h-[44px]"
+                />
+                <span className="absolute top-1/2 right-8 -translate-y-1/2 text-mainGray z-50">
+                  원
+                </span>
+              </div>
               <span> - </span>
 
-              <InputNoLabel
-                placeholder="0"
-                type="number"
-                inputStyles="w-[140px] h-[44px]"
-              />
+              <div className="relative">
+                <InputNoLabel
+                  placeholder="0"
+                  type="number"
+                  inputStyles="w-[140px] h-[44px]"
+                />
+                <span className="absolute top-1/2 right-8 -translate-y-1/2 text-mainGray z-50">
+                  원
+                </span>
+              </div>
             </div>
 
             <Button className="h-[46px] w-[170px] rounded-[5px] bg-lightGray text-textGray text-base">
@@ -274,7 +284,9 @@ const ToolProductManagementPage = () => {
                       />
                     </div>
                   </TableCell>
-                  <TableCell>{row.productName}</TableCell>
+                  <TableCell className="max-w-[200px] overflow-hidden text-ellipsis text-nowrap">
+                    {row.productName}
+                  </TableCell>
                   <TableCell>{row.registrationDate}</TableCell>
                   <TableCell>{row.category}</TableCell>
                   <TableCell>{row.situation}</TableCell>

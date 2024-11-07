@@ -27,6 +27,7 @@ import failure from "@/assets/icons/failure.svg";
 
 import camera from "@/assets/icons/camera.svg";
 import cancel from "@/assets/icons/cancel.svg";
+import uploadImage from "@/assets/icons/image_upload.svg";
 
 const assets = {
   member,
@@ -52,6 +53,7 @@ const assets = {
 
   camera,
   cancel,
+  uploadImage,
 };
 
 export default assets;
