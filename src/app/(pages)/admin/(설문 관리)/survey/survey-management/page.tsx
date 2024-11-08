@@ -16,7 +16,7 @@ import {
 import InputWithLabel from "@/components/InputWithLabel";
 import HeaderDropDown from "@/components/HeaderDropDown";
 
-import row4Column1 from "@/data/tables/row4Column1";
+import row13Column1 from "@/data/tables/row13Column1";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Image from "next/image";
@@ -58,7 +58,7 @@ const SurveyManagementPage = () => {
 
   const rowsPerPage = parseInt(viewValue);
 
-  const pages = Math.ceil(row4Column1.length / rowsPerPage);
+  const pages = Math.ceil(row13Column1.length / rowsPerPage);
 
   const [currentData, setCurrentData] = useState<any>();
 
@@ -66,9 +66,9 @@ const SurveyManagementPage = () => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
 
-    setCurrentData(row4Column1.slice(start, end));
-    return row4Column1.slice(start, end);
-  }, [page, row4Column1, viewValue, rowsPerPage]);
+    setCurrentData(row13Column1.slice(start, end));
+    return row13Column1.slice(start, end);
+  }, [page, row13Column1, viewValue, rowsPerPage]);
 
   // Selection Logic
   const [clickedRowIds, setClickedRowIds] = useState<number[]>([]);
@@ -112,6 +112,23 @@ const SurveyManagementPage = () => {
 
           <div className="flex justify-center items-center gap-3">
             <HeaderDropDown
+              options={[
+                {
+                  key: "10",
+                  label: "최신순",
+                },
+                {
+                  key: "20",
+                  label: "최신순",
+                },
+              ]}
+              defaultSelectedKey="최신순"
+              value="10"
+              setNewValue={() => {}}
+              styles="w-[124px] "
+              mainStyles="bg-transparent border border-grayBorder rounded-[5px]"
+            />
+            <HeaderDropDown
               options={viewOptions}
               defaultSelectedKey={viewOptionsDefault}
               value={viewValue}
@@ -119,6 +136,7 @@ const SurveyManagementPage = () => {
               styles="w-[139px] "
               mainStyles="bg-transparent border border-grayBorder rounded-[5px]"
             />
+
             <Button
               aria-label="Header"
               className="bg-mainGray text-mainWhite font-normal text-base min-w-[68px] rounded-[5px]"
@@ -127,9 +145,9 @@ const SurveyManagementPage = () => {
             </Button>
             <Button
               aria-label="Header"
-              className="bg-secondBlack text-mainWhite font-normal text-base min-w-[100px] rounded-[5px]"
+              className="bg-secondBlack text-mainWhite font-normal text-base min-w-[68px] rounded-[5px]"
             >
-              회원 등록
+              등록
             </Button>
           </div>
         </div>
@@ -197,7 +215,7 @@ const SurveyManagementPage = () => {
               <TableColumn>카테고리</TableColumn>
               <TableColumn>작성일</TableColumn>
               <TableColumn>작성자</TableColumn>
-              {/* <TableColumn>작성날짜</TableColumn> */}
+              <TableColumn>작성날짜</TableColumn>
             </TableHeader>
             <TableBody>
               {items.map((row) => (
@@ -220,16 +238,16 @@ const SurveyManagementPage = () => {
                   <TableCell>{row.number}</TableCell>
                   <TableCell>{row.title}</TableCell>
                   <TableCell>{row.category}</TableCell>
-                  <TableCell>{row.createdDate}</TableCell>
+                  <TableCell>{row.creationDate}</TableCell>
                   <TableCell>{row.author}</TableCell>
-                  {/* <TableCell>
+                  <TableCell>
                     <Link
-                      href={`/admin/community/community-management/${row.id}`}
+                      href={`/admin/survey/1`}
                       className="text-mainPurple underline underline-offset-2"
                     >
                       {row.viewDetails}
                     </Link>
-                  </TableCell> */}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>

@@ -104,6 +104,23 @@ const NoticePage = () => {
 
           <div className="flex justify-center items-center gap-3">
             <HeaderDropDown
+              options={[
+                {
+                  key: "10",
+                  label: "최신순",
+                },
+                {
+                  key: "20",
+                  label: "최신순",
+                },
+              ]}
+              defaultSelectedKey="최신순"
+              value="10"
+              setNewValue={() => {}}
+              styles="w-[124px] "
+              mainStyles="bg-transparent border border-grayBorder rounded-[5px]"
+            />
+            <HeaderDropDown
               options={viewOptions}
               defaultSelectedKey={viewOptionsDefault}
               value={viewValue}
@@ -111,6 +128,7 @@ const NoticePage = () => {
               styles="w-[139px] "
               mainStyles="bg-transparent border border-grayBorder rounded-[5px]"
             />
+
             <Button
               aria-label="Header"
               className="bg-mainGray text-mainWhite font-normal text-base min-w-[68px] rounded-[5px]"
@@ -119,9 +137,9 @@ const NoticePage = () => {
             </Button>
             <Button
               aria-label="Header"
-              className="bg-secondBlack text-mainWhite font-normal text-base min-w-[100px] rounded-[5px]"
+              className="bg-secondBlack text-mainWhite font-normal text-base min-w-[68px] rounded-[5px]"
             >
-              회원 등록
+              등록
             </Button>
           </div>
         </div>
@@ -187,7 +205,7 @@ const NoticePage = () => {
               <TableColumn>번호</TableColumn>
               <TableColumn>제목</TableColumn>
               <TableColumn>작성일</TableColumn>
-              {/* <TableColumn>작성날짜</TableColumn> */}
+              <TableColumn>작성날짜</TableColumn>
             </TableHeader>
             <TableBody>
               {items.map((row) => (
@@ -210,14 +228,14 @@ const NoticePage = () => {
                   <TableCell>{row.number}</TableCell>
                   <TableCell>{row.title}</TableCell>
                   <TableCell>{row.createdDate}</TableCell>
-                  {/* <TableCell>
+                  <TableCell>
                     <Link
-                      href={`/admin/community/community-management/${row.id}`}
+                      href={`/admin/notice/1`}
                       className="text-mainPurple underline underline-offset-2"
                     >
                       {row.viewDetails}
                     </Link>
-                  </TableCell> */}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
