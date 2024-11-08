@@ -29,6 +29,8 @@ import camera from "@/assets/icons/camera.svg";
 import cancel from "@/assets/icons/cancel.svg";
 import uploadImage from "@/assets/icons/image_upload.svg";
 
+import dropDownArrow from "@/assets/icons/drop-down.svg";
+
 const assets = {
   member,
   memberActive,
@@ -54,6 +56,8 @@ const assets = {
   camera,
   cancel,
   uploadImage,
+
+  dropDownArrow,
 };
 
 export default assets;
