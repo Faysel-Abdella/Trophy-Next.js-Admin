@@ -9,10 +9,14 @@ import InputWithLabel from "@/components/InputWithLabel";
 import Image from "next/image";
 
 import React, { useRef } from "react";
-import JoditEditor from "jodit-react";
 import { Button } from "@nextui-org/react";
+import dynamic from "next/dynamic";
 
 const RegisterFund = () => {
+  const JoditEditor = dynamic(() => import("jodit-react"), {
+    ssr: false,
+  });
+
   const titleStyle = "font-bold text-base text-secondBlack w-[100px]";
 
   const editor = useRef(null);
