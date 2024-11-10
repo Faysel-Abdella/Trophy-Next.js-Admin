@@ -6,11 +6,13 @@ const DropDown = ({
   defaultSelectedKeys,
   selectStyles,
   insideStyles,
+  valueStyles = "text-[15px]",
 }: {
   options: { key: string; label: string }[];
   defaultSelectedKeys: string;
   selectStyles?: string;
   insideStyles?: string;
+  valueStyles?: string;
 }) => {
   return (
     <div className="flex items-center">
@@ -21,7 +23,7 @@ const DropDown = ({
               `${selectStyles} border-1 border-[#D2D5D6]  rounded-[5px] text-mainGray`,
             ],
             trigger: [`${insideStyles}  bg-[#ffffff] `],
-            value: ["text-[15px] "],
+            value: [`${valueStyles}`],
           }}
           disallowEmptySelection={true}
           defaultSelectedKeys={[defaultSelectedKeys]}
