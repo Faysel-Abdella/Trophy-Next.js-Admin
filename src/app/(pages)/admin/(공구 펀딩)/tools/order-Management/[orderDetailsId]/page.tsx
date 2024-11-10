@@ -306,7 +306,7 @@ const OrderDetailsPage = () => {
                 shadow="none"
                 classNames={{
                   th: [
-                    "font-normal text-[16px] bg-[#EEEEEE] text-[#A1A9A3] h-[48px]  text-center",
+                    "font-normal text-[16px] bg-[#EEEEEE] text-[#A1A9A3] h-[60px]  text-center",
                   ],
                   td: [
                     "px-6  text-center font-normal text-base text-[#363941] ",
