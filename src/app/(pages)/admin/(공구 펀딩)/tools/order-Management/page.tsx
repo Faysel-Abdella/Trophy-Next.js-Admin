@@ -286,9 +286,12 @@ const OrderManagementPage = () => {
                     </div>
                   </TableCell>
                   <TableCell>
-                    <p className="text-[#1C7FF2] underline underline-offset-2 text-nowrap">
+                    <Link
+                      href="/admin/tools/order-Management/1"
+                      className="text-[#1C7FF2] underline underline-offset-2 text-nowrap"
+                    >
                       {row.name}
-                    </p>
+                    </Link>
                   </TableCell>
                   <TableCell>{row.amount}</TableCell>
                   <TableCell>
